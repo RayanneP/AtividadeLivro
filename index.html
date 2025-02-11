@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exposição - Puuung</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/gatin.gif">
+    <script>
+        function selecionarEstrela(valor) {
+            document.getElementById("rating").value = valor;
+            let estrelas = document.querySelectorAll(".rating button img");
+            estrelas.forEach((estrela, index) => {
+                if (index < valor) {
+                    estrela.src = "img/star1.png";
+                } else {
+                    estrela.src = "img/star.png";
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img class="logo" src="img/logo.png" alt="Logo">
+        <nav>
+            <a href="#sinopse">Sinopse</a>
+            <a href="#autora">Autora</a>
+            <a href="#fanart">FanArt</a>
+            <a href="#video">Trailer</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>A <br> Rainha <br> Vermelha</h1>
+
+        <section id="details">
+            <div class="detail" id="sinopse">
+                <img src="img/A-rainha-vermelha.png" alt="Capa do livro A Rainha Vermelha">
+                <div class="detail-description">
+                    <h3>Sinopse</h3>
+                    <p>
+                        Neste segundo volume da série Guerra dos Primos, a Inglaterra está prestes a enfrentar uma guerra civil. O rei, Henrique VI de Lancaster, apresenta os primeiros sinais de loucura, e a linhagem dos duques de York assume o trono. Herdeira da antiga casa real, cujo símbolo é uma rosa vermelha, Margaret Beaufort acredita que um grande destino a aguarda. Viúva aos 15 anos, ela decide dedicar sua vida solitária a pôr o filho, Henrique Tudor, no trono, e para isso estabelece alianças perigosas e lidera uma das maiores rebeliões de seu tempo. Um romance repleto de paixões e traição, A Rainha Vermelha traz de volta à vida a matriarca dos Tudor, uma mulher determinada que acredita que, sozinha, pode mudar o curso da história.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Seção de Avaliação -->
+            <section id="avaliacao">
+                <h2>Gostou do livro? Avalie!</h2>
+                <input type="hidden" id="rating" name="rating" value="0">
+                <div class="rating">
+                    <button type="button" onclick="selecionarEstrela(1)"><img src="img/star.png" alt="⭐"></button>
+                    <button type="button" onclick="selecionarEstrela(2)"><img src="img/star.png" alt="⭐⭐"></button>
+                    <button type="button" onclick="selecionarEstrela(3)"><img src="img/star.png" alt="⭐⭐⭐"></button>
+                    <button type="button" onclick="selecionarEstrela(4)"><img src="img/star.png" alt="⭐⭐⭐⭐"></button>
+                    <button type="button" onclick="selecionarEstrela(5)"><img src="img/star.png" alt="⭐⭐⭐⭐⭐"></button>
+                </div>
+                <button type="submit">Enviar</button>
+            </section>
+
+            <!-- Seção para Comprar o Livro -->
+            <section id="comprar">
+                <h2>Quer comprar o livro?</h2>
+                <a href="https://www.amazon.com.br/rainha-vermelha-Vol-2/dp/8501093157/ref=sr_1_9?crid=3M5SU76CUV1ET&dib=eyJ2IjoiMSJ9.RxlaQfcD9YXWK8QEANadrxVHdACxFscQMxNMBzgLGrD1BVk-KaO-lvuoTmMNzuEXLaFZy2Y_UjoR0chki4qzak5_3bFW_D56jlPZaHHdtP1_TvmyMmc-FxIegz-97mWEjbIqRy6t89aSABx_oY8uZsBdd1r7zsePYuShhElRHVK3p7YdKoWm6F5suY7txk1vbLTXvmMEKq84gPTYxdvm2rAri9hDihU8gsPSiAmGV8aAM4V0wFPtyi-pdoZ2YjKSl3TqmzSnjt3a53taDTYNtNHdE3iNokquiQiIN8JIIACQd5ZwC6y10jDB1L-qgW3jl8UfpAPlR2UQbTxxhHen0IbxavkOckQeXlO6Wuss5XUgFfZzu802o3LT_b6kvSjNhD9Pgv7r4oFopTSSHAlkJz412i-r30p1M1YhsaZVqHR-wggNvLpcuZJaOzISWtBc.DSdszAvcjYMlFS1SYy_ucglurR-Xq1brD6aJ1MnvI34&dib_tag=se&keywords=a+rainha+vermelha&qid=1739300011&sprefix=a+rainha%2Caps%2C198&sr=8-9&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9" target="_blank" class="botao-compra">Compre aqui</a>
+            </section>
+
+            <div class="detail" id="autora">
+                <div class="detail-description">
+                    <h3>Autora</h3>
+                    <p>Philippa Gregory é uma romancista britânica conhecida pelos livros A Irmã de Ana Bolena e A Rainha Branca, obras de diferentes séries que foram adaptadas para o cinema e a televisão.Philippa Gregory CBE (nascida em 9 de janeiro de 1954) é uma romancista histórica inglesa que publica desde 1987. A mais conhecida de suas obras é The Other Boleyn Girl (2001), que em 2002 ganhou o prêmio de Romance Romântico do Ano da Romantic Novelists' Association [ 1 ] e foi adaptado para dois filmes.
+
+                        A revista AudioFile chamou Gregory de "a rainha da ficção histórica britânica".</p>
+                </div>
+                <img src="img/philippa.jpg" alt="Foto da autora Philippa Gregory">
+            </div>
+
+            <div class="detail" id="fanart">
+                <img src="img/margaret.jpg" alt="Ilustração de Margaret Beaufort">
+                <div class="detail-description">
+                    <h3>Envie aqui a sua fanart do livro. Nos encante com a sua arte!:</h3>
+                    <form name="FanArt" method="post" enctype="multipart/form-data" action="upload.php">
+                        <input type="file" name="image" /><br>
+                        <input type="submit" value="Enviar" name="envia" />
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section id="video">
+        <h2>Assista ao trailer do livro</h2>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/q2skd4nJO-M?start=46" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>    
+    <footer>
+        <p id="contatos">&copy; 2025 Philippa Gregory - Contato: contato@record.com</p>
+    </footer>
+</body>
+</html>
