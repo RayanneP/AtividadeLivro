@@ -11,7 +11,6 @@ body {
     color: #333;
 }
 
-/* Estilo do cabeçalho */
 header {
     background: #222222;
     color: white;
@@ -122,7 +121,11 @@ input[type="submit"]:hover {
     background: #730912;
 }
 
-/* Centraliza e estiliza o botão de "Enviar" */
+#avaliacao {
+    text-align: center;
+    margin: 40px 0;
+}
+
 #avaliacao button[type="submit"] {
     padding: 15px 30px;
     background-color: #D90D1E;
@@ -131,9 +134,21 @@ input[type="submit"]:hover {
     cursor: pointer;
     border-radius: 5px;
     margin-top: 20px;
+    font-size: 1.1em;
+    transition: background 0.3s;
 }
 
-/* Estilização do botão "Compre aqui" */
+#avaliacao button[type="submit"]:hover {
+    background-color: #730912;
+}
+
+#avaliacao .rating {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
 #comprar {
     text-align: center;
     margin: 40px 0;
@@ -146,11 +161,13 @@ input[type="submit"]:hover {
     text-decoration: none;
     border-radius: 5px;
     font-size: 1.2em;
+    transition: background 0.3s;
 }
 
 .botao-compra:hover {
     background-color: #730912;
 }
+
 .video-container {
     display: flex;
     justify-content: center;
@@ -176,7 +193,7 @@ footer p {
 .rating {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
     margin-top: 20px;
 }
 
@@ -194,4 +211,154 @@ footer p {
 .rating img {
     width: 40px;
     height: 40px;
+}
+
+/* Responsividade - Estilos para dispositivos móveis */
+@media (max-width: 1200px) {
+    header {
+        padding: 20px 5%;
+    }
+    .detail {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .detail img {
+        width: 70%;
+        max-width: 300px;
+    }
+    .detail-description {
+        width: 80%;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        margin: 10px 0;
+    }
+    #details {
+        width: 90%;
+    }
+    .botao-compra {
+        font-size: 1.1em;
+    }
+    .video-container iframe {
+        width: 100%;
+        height: auto;
+    }
+    .detail img {
+        width: 100%;
+    }
+    .detail-description {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo {
+        height: 50px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .detail {
+        flex-direction: column;
+        align-items: center;
+    }
+    .detail img {
+        width: 80%;
+        max-width: 250px;
+    }
+    .detail-description {
+        width: 80%;
+        padding-left: 0;
+    }
+    .rating img {
+        width: 35px;
+        height: 35px;
+    }
+    .botao-compra {
+        font-size: 1em;
+        padding: 12px 25px;
+    }
+    footer p {
+        font-size: 1em;
+    }
+}
+#avaliacao {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border: 2px solid #D90D1E;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+}
+
+#avaliacao .rating {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#avaliacao button[type="submit"] {
+    padding: 12px 25px;
+    background-color: #D90D1E;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 1.1em;
+    transition: background 0.3s;
+}
+
+#avaliacao button[type="submit"]:hover {
+    background-color: #730912;
+}
+
+/* Caixa ao redor da seção "Compre Aqui" */
+#comprar {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border: 2px solid #D90D1E;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+}
+
+/* Ajuste do botão "Compre aqui" */
+.botao-compra {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #D90D1E;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background 0.3s;
+}
+
+.botao-compra:hover {
+    background-color: #730912;
 }
