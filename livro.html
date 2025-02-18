@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Páginas</title>
+    <link rel="stylesheet" href="livro.css">
+    <link rel="shortcut icon" href="img/logo.png">
+</head>
+<body>
+    <header>
+        <img class="logo" src="img/logo.png" alt="Logo">
+        <nav>
+            <a href="index.html#sinopse">Sinopse</a>
+            <a href="index.html#autora">Autora</a>
+            <a href="index.html#fanart">FanArt</a>
+            <a href="index.html#video">Trailer</a>            
+            <a href="livro.html">Sobre</a>
+        </nav>
+    </header>
+    <main>
+        <section class="item ativo">
+            <div class="title">Capa</div>
+            <img src="img/capa.jpg" class="ft" alt="Capa do livro">
+        </section>
+        <section class="item">
+            <div class="title">Árvore Genealógica</div>
+            <img src="img/ordem cronologica.png" class="ft" alt="Árvore Genealógica">
+        </section>
+        <section class="item">
+            <div class="title">Mapa</div>
+            <img src="img/mapa.png" class="ft" alt="Mapa do universo do livro">
+        </section>
+        <div class="seta">
+            <button id="anterior"><</button>
+            <button id="proximo">></button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -7,19 +7,6 @@
     <title>A rainha vermelha</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/logo.png">
-    <script>
-        function selecionarEstrela(valor) {
-            document.getElementById("rating").value = valor;
-            let estrelas = document.querySelectorAll(".rating button img");
-            estrelas.forEach((estrela, index) => {
-                if (index < valor) {
-                    estrela.src = "img/star1.png";
-                } else {
-                    estrela.src = "img/star.png";
-                }
-            });
-        }
-    </script>
 </head>
 <body>
     <header>
@@ -29,6 +16,7 @@
             <a href="#autora">Autora</a>
             <a href="#fanart">FanArt</a>
             <a href="#video">Trailer</a>
+            <a href="livro.html">Sobre</a>
         </nav>
     </header>
 
@@ -98,4 +86,6 @@
         <p id="contatos">&copy; 2025 Philippa Gregory - Contato: contato@record.com</p>
     </footer>
 </body>
+<script src="script.js">
+</script>
 </html>

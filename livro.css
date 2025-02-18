@@ -1,0 +1,138 @@
+:root {
+    --background: #fdffd5;
+    --primary-color: #000000;
+    --secondary-color: #D90D1E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+}
+
+body {
+    background-color: #fdffd5;
+    color: #333;
+}
+
+header {
+    background: #222222;
+    color: white;
+    padding: 20px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 4px solid #D90D1E;
+}
+
+.logo {
+    border-radius: 50%;
+    height: 60px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* Ajuste no main para não cobrir o cabeçalho */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px; /* Espaço suficiente para o cabeçalho */
+}
+
+/* Ajustar as seções */
+.item {
+    display: none;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--background);
+    transition: opacity 0.5s ease;
+}
+
+.item.ativo {
+    display: block;
+    opacity: 1;
+}
+
+/* Ajuste no título */
+.item .title {
+    font-size: 3rem;
+    color: #730912;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Ajuste na imagem para descer mais */
+.item img {
+    max-width: 80%;  /* Reduz a largura */
+    max-height: 70vh; /* Limita a altura */
+    object-fit: contain;
+    display: block;
+    margin: 40px auto 0; /* Adiciona um espaçamento no topo */
+    transition: transform 0.3s ease;
+}
+
+.item img:hover {
+    transform: scale(1.05);
+}
+
+/* Ajuste nos botões */
+.seta button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+}
+
+.seta button:hover {
+    background-color: var(--primary-color);
+}
+
+#anterior {
+    left: 20px;
+}
+
+#proximo {
+    right: 20px;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .item .title {
+        font-size: 2rem;
+    }
+
+    .seta button {
+        width: 40px;
+        height: 40px;
+    }
+}
