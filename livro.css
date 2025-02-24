@@ -136,3 +136,16 @@ main {
         height: 40px;
     }
 }
+@keyframes mexer {
+    from {
+        top: 100%;
+        opacity: 0;
+    }
+}
+.item{
+    animation: mexer 0.5s ease-in-out 1;
+}
+
+.title{
+    animation: mexer 0.5s ease-in-out 1;
+}
